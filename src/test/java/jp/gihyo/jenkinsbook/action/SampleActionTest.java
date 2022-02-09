@@ -61,7 +61,7 @@ public class SampleActionTest {
 
 		assertEquals(false, result);
 	}
-	
+	/*
 	@Test
 	public void testCheckError3() {
 		SampleAction action = new SampleAction();
@@ -90,4 +90,5 @@ public class SampleActionTest {
 
 		assertTrue("./WEB-INF/result.jsp".equals(result));
 	}
+	*/
 }

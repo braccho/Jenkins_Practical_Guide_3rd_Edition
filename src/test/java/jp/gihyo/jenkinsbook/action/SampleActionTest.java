@@ -61,13 +61,28 @@ public class SampleActionTest {
 
 		assertEquals(false, result);
 	}
-	/*
+
 	@Test
 	public void testCheckError3() {
 		SampleAction action = new SampleAction();
 		HttpServletRequest request = createMock(HttpServletRequest.class);
 
 		expect(request.getParameter("FirstName")).andReturn("");
+
+		replay(request);
+		boolean result = action.checkParameter(request);
+		verify(request);
+
+		assertEquals(false, result);
+	}
+
+	@Test
+	public void testCheckError4() {
+		SampleAction action = new SampleAction();
+		HttpServletRequest request = createMock(HttpServletRequest.class);
+
+		expect(request.getParameter("FirstName")).andReturn("firstName");
+		expect(request.getParameter("LastName")).andReturn("");
 
 		replay(request);
 		boolean result = action.checkParameter(request);
@@ -90,5 +105,4 @@ public class SampleActionTest {
 
 		assertTrue("./WEB-INF/result.jsp".equals(result));
 	}
-	*/
 }
